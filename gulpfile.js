@@ -50,7 +50,7 @@ let  jpegrecompress = require('imagemin-jpeg-recompress'); // плагин дл�
 let  pngquant = require('imagemin-pngquant'); // плагин для сжатия png
 let  rimraf = require('gulp-rimraf'); // плагин для удаления файлов и каталогов
 let  rename = require('gulp-rename');
-
+let tildeImporter = require('node-sass-tilde-importer'); // ~ для импорта из node_modules
 /* задачи */
 
 // запуск сервера
@@ -74,7 +74,9 @@ gulp.task('css:build', function () {
   return gulp.src(path.src.style) // получим main.scss
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(sourcemaps.init()) // инициализируем sourcemap
-    .pipe(sass()) // scss -> css
+    .pipe(sass({
+      importer: tildeImporter
+    })) // scss -> css
     .pipe(autoprefixer()) // добавим префиксы
     .pipe(gulp.dest(path.build.css))
     .pipe(rename({
