@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  //= ../template/head.html
+</head>
+
+<body>
+  //= ../template/header.html
+
+  <main class="index-main">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col index-main__wrapper">
+          <h1 class="index-main__title">AppName</h1>
+        </div>
+      </div>
+    </div>
+    <section class="index-main__form">
+      <h2 class="visually-hidden">Поиск инструктора</h2>
+      <form action="#" class="main-form" method="POST">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <label class="main-form__label" for="equipment">Вид спорта</label>
+            </div>
+            <div class="col-6">
+              <label class="main-form__label" for="place">Место</label>
+            </div>
+            <div class="col-1"></div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <select class="main-form__input main-form__input--equipment" name="equipment" id="equipment" required>
+                <option value="snowboard">Сноуборд</option>
+                <option value="skiing">Лыжи</option>
+                <option value="sled">Санки</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <input class="main-form__input" type="text" list="place-list" name="place" id="place">
+              <datalist id="place-list">
+                <option value="redGlade">Красная поляна</option>
+                <option value="alps">Альпы</option>
+                <option value="gasprom">Газпром</option>
+              </datalist>
+            </div>
+            <div class="col-1">
+              <button class="button" type="submit">Найти</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="index-main__description">Любому райдеру найдем инструктора</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  //= ../template/footer.html
+  //= ../template/scripts.html
+</body>
+
+</html>
