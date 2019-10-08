@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  //= ../template/head.html
+</head>
+
+<body>
+  <main class="main-login">
+    <h1 class="visually-hidden">Форма входа</h1>
+    <section class="main-login__form form form--login">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h2 class="form__title">Вход</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form action="#" method="POST">
+              <div class="form__section">
+                <label class="form__label" for="email">E-mail</label>
+                <input class="form__input" type="email" id="email" name="email">
+              </div>
+              <div class="form__section">
+                <label class="form__label" for="pass">Пароль</label>
+                <input class="form__input" type="password" id="pass" name="password">
+              </div>
+              <div class="form__section">
+                <a class="form__link" href="#">Забыли пароль</a>
+              </div>
+              <div class="form__section">
+                <input class="form__checkbox" type="checkbox" id="checkbox" name="checkbox" checked>
+                <label class="form__label" for="checkbox">Запомнить меня</label>
+              </div>
+              <div class="dorm__section">
+                <button class="button" type="submit">Войти</button>
+              </div>
+              <div class="form__invalid">
+                <p class="form__invalid-text">Неверный e-mail или пароль</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
