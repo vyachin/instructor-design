@@ -17,27 +17,27 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-6">
-            <form action="#" method="POST">
+            <form class="form__wrapper" action="#" method="POST">
               <div class="form__section">
                 <label class="form__label" for="email">E-mail</label>
                 <input class="form__input" type="email" id="email" name="email">
               </div>
-              <div class="form__section">
+              <div class="form__invalid display-none">
+                <p class="form__invalid-text">Неверный e-mail или пароль</p>
+              </div>
+              <div class="form__section form__section--pass">
                 <label class="form__label" for="pass">Пароль</label>
                 <input class="form__input" type="password" id="pass" name="password">
               </div>
-              <div class="form__section">
-                <a class="form__link" href="#">Забыли пароль</a>
+              <div class="form__section form__section--link">
+                <a class="form__link" href="recovery.html">Забыли пароль</a>
               </div>
-              <div class="form__section">
+              <div class="form__section form__section--checkbox">
                 <input class="form__checkbox" type="checkbox" id="checkbox" name="checkbox" checked>
-                <label class="form__label" for="checkbox">Запомнить меня</label>
+                <label class="form__label form__label--checkbox" for="checkbox">Запомнить меня</label>
               </div>
-              <div class="dorm__section">
+              <div class="form__section form__section--submit">
                 <button class="button" type="submit">Войти</button>
-              </div>
-              <div class="form__invalid">
-                <p class="form__invalid-text">Неверный e-mail или пароль</p>
               </div>
             </form>
           </div>
