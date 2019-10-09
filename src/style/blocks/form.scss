@@ -39,11 +39,9 @@
     margin-right: auto;
   }
 
-  &--recovery {
-    margin-bottom: 40px;
-  }
-
-  &--repeat-pass {
+  &--recovery,
+  &--repeat-pass,
+  &--user-pass {
     margin-bottom: 40px;
   }
 }
