@@ -1,5 +1,8 @@
+.form {
+  padding-top: 50px;
+}
+
 .form__title {
-  margin-top: 30px;
   margin-bottom: 25px;
 
   font-size: $form-title-size;
@@ -37,6 +40,10 @@
   }
 
   &--recovery {
+    margin-bottom: 40px;
+  }
+
+  &--repeat-pass {
     margin-bottom: 40px;
   }
 }
