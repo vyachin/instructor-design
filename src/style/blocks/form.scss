@@ -1,4 +1,5 @@
 .form__title {
+  margin-top: 30px;
   margin-bottom: 25px;
 
   font-size: $form-title-size;
@@ -9,6 +10,8 @@
 }
 
 .form__section {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
@@ -26,10 +29,15 @@
   &--link {
     margin-bottom: 20px;
     margin-left: 10px;
+    margin-right: auto;
   }
 
   &--submit {
     margin-right: auto;
+  }
+
+  &--recovery {
+    margin-bottom: 40px;
   }
 }
 
@@ -72,7 +80,10 @@
 
 .form__invalid {
   &-text {
-    margin: -19px 0 0 10px;
+    position: absolute;
+    bottom: -1.5em;
+
+    margin: 0 0 0 10px;
 
     font-size: $label-text-size;
     font-weight: 600;

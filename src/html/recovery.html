@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  //= ../template/head.html
+</head>
+
+<body>
+  //= ../template/header.html
+
+  <main class="main-recovery">
+    <h1 class="visually-hidden">Форма восстановления пароля</h1>
+    <section class="main-recovery__form form form--recovery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h2 class="form__title">Восстановление пароля</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form class="form__wrapper" action="#" method="POST">
+              <div class="form__section form__section--recovery">
+                <label class="form__label" for="email">E-mail</label>
+                <input class="form__input" type="email" id="email" name="email">
+                <p class="form__invalid-text display-none">Пользователь не найден</p>
+              </div>
+              <div class="form__section form__section--submit">
+                <button class="button" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelector('.header').classList.add('header--form');
+  </script>
+</body>
+
+</html>
