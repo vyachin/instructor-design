@@ -1,8 +1,15 @@
 .button {
   width: 100%;
+  padding: 0 15px;
+
+  font-weight: 600;
 
   background-color: #3d8bcd;
   border: none;
   border-radius: 5px;
   color: $button-text;
+
+  &--index {
+    padding: 0;
+  }
 }
