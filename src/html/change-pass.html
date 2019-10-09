@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  //= ../template/head.html
+</head>
+
+<body>
+  //= ../template/header.html
+
+  <main class="main-change">
+    <h1 class="visually-hidden">Форма смены пароля</h1>
+    <section class="main-change__form form form--change">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h2 class="form__title">Смена пароля</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form class="form__wrapper" action="#" method="POST">
+              <div class="form__section form__section--new-pass">
+                <label class="form__label" for="pass">Новый пароль</label>
+                <input class="form__input" type="passwod" id="pass" name="pass" minlength="5">
+                <p class="form__invalid-text display-none">Пароль слишком короткий</p>
+              </div>
+              <div class="form__section form__section--repeat-pass">
+                <label class="form__label" for="re-pass">Повторите пароль</label>
+                <input class="form__input" type="passwod" id="re-pass" name="re-pass" minlength="5">
+                <p class="form__invalid-text display-none">Парооли не совпадают</p>
+              </div>
+              <div class="form__section form__section--submit">
+                <button class="button" type="submit">Сохранить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main-change__popup popup display-none">
+        <div class="popup__wrapper">
+          <p class="popup__text">Пароль успешно сохранен</p>
+          <button class="popup__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelector('.header').classList.add('header--form');
+  </script>
+</body>
+
+</html>
