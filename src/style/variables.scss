@@ -2,14 +2,23 @@
 
 // Custom variables
 // ---Colors---
-$bc-color: #f6f6f6;
-$light-text: #9f9f9f;
-$button-text: #e3ffff;
-$form-borders: #dddddd;
-$main-text-color: #000000;
-$invalid: #c01a1a;
-$popup-text-color: #7bb875;
-$popup-bg-color: #e0f0d6;
+$whitest: #f6f6f6;
+$light-gray: #9f9f9f;
+$light-blue: #e3ffff;
+$almost-white: #dddddd;
+$black: #000000;
+$red: #cc1717;
+$light-green: #7bb875;
+$lightest-green: #e0f0d6;
+
+$bc-color: $whitest;
+$light-text: $light-gray;
+$button-text: $light-blue;
+$form-borders: $almost-white;
+$main-text-color: $black;
+$invalid: $red;
+$popup-text-color: $light-green;
+$popup-bg-color: $lightest-green;
 
 // ---Sizes---
 $form-title-size: 32px;
