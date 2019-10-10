@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  //= ../template/head.html
+</head>
+
+<body>
+  //= ../template/header.html
+
+  <main class="main-instructor-reg">
+    <h1 class="visually-hidden">Форма регистрации инструктора</h1>
+    <section class="main-instructor-reg__form form form--instructor-reg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h2 class="form__title">Регистрация инструктором</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form class="form__wrapper" action="#" method="POST">
+              <div class="form__section form__section--instructor-name">
+                <label class="form__label" for="instructor-name">Имя</label>
+                <input class="form__input" type="text" id="instructor-name" name="instructor-name" minlength="2">
+                <p class="form__invalid-text display-none">Имя слишком короткое</p>
+              </div>
+              <div class="form__section form__section--instructor-email">
+                <label class="form__label" for="instructor-email">E-mail</label>
+                <input class="form__input" type="email" id="instructor-email" name="instructor-email" minlength="5">
+                <p class="form__invalid-text display-none">E-mail слишком короткий</p>
+              </div>
+              <div class="form__section form__section--sports-check">
+                <p class="form__description">Виды спорта</p>
+                <div class="form__checkbox-item">
+                  <input class="form__checkbox pointer" type="checkbox" id="skiing" name="skiing">
+                  <label class="form__label form__label--checkbox pointer" for="skiing">Горные лыжи</label>
+                </div>
+                <div class="form__checkbox-item">
+                  <input class="form__checkbox pointer" type="checkbox" id="snowboard" name="snowboard">
+                  <label class="form__label form__label--checkbox pointer" for="snowboard">Сноуборд</label>
+                </div>
+                <p class="form__invalid-text display-none">Выберите виды спорта по которым Вы можете инструктировать</p>
+              </div>
+              <div class="form__section form__section--instructor-pass">
+                <label class="form__label" for="instructor-pass">Пароль</label>
+                <input class="form__input" type="password" id="instructor-pass" name="instructor-pass" minlength="5">
+                <p class="form__invalid-text display-none">Пароль слишком короткий</p>
+              </div>
+              <div class="form__section form__section--submit">
+                <button class="button" type="submit">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main-instructor-reg__popup popup display-none">
+        <div class="popup__wrapper">
+          <p class="popup__text">Мы отправили Вам на почту инструкцию по активации аккаунта</p>
+          <button class="popup__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelector('.header').classList.add('header--form');
+  </script>
+</body>
+
+</html>
