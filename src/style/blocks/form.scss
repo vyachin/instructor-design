@@ -48,7 +48,8 @@
   }
 }
 
-.form__label {
+.form__label,
+.form__description {
   margin: 0 0 0 10px;
 
   font-size: $label-text-size;
@@ -83,6 +84,17 @@
 
 .form__checkbox {
   margin-top: 5px;
+}
+
+.form__checkbox-item {
+  display: flex;
+  margin-bottom: 5px;
+
+  user-select: none;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .form__invalid {
