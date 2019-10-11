@@ -46,6 +46,19 @@
   &--user-pass {
     margin-bottom: 40px;
   }
+
+  &--avatar {
+    flex-direction: row;
+  }
+
+  &--user-email,
+  &--user-birth-date {
+    margin-bottom: 35px;
+  }
+
+  &--user-birth-date {
+    width: 160px;
+  }
 }
 
 .form__label,
@@ -63,13 +76,17 @@
 .form__input {
   width: 100%;
   height: 100%;
-  padding: 0 10px;
+  padding: 5px 10px;
 
   border-radius: 5px;
   border: 1px solid $form-borders;
 
   &--equipment {
     padding-left: calc(50% - 3em);
+  }
+
+  &--birth-date {
+    text-align: center;
   }
 }
 
@@ -97,15 +114,92 @@
   }
 }
 
-.form__invalid {
-  &-text {
-    position: absolute;
-    bottom: -1.5em;
+.form__invalid-text {
+  position: absolute;
+  bottom: -1.5em;
 
-    margin: 0 0 0 10px;
+  margin: 0 0 0 10px;
 
-    font-size: $label-text-size;
-    font-weight: 600;
-    color: $invalid;
+  font-size: $label-text-size;
+  font-weight: 600;
+  color: $invalid;
+}
+
+.form__sub-section--full-name {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.form__user-img {
+  position: absolute;
+
+  display: block;
+  width: 170px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.form__user-img-wrapper {
+  position: relative;
+
+  display: flex;
+  width: 170px;
+  height: 180px;
+  box-sizing: content-box;
+  margin-bottom: 5px;
+
+  border: 2px solid $avatar-bg;
+}
+
+.form__user-img-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px;
+
+  background-color: $avatar-bg;
+}
+
+.form__user-img-description {
+  color: $avatar-descr-color;
+}
+
+.form__label--avatar {
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  font-weight: 500;
+  color: $avatar-link-color;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__input-avatar:active,
+.form__input-avatar:focus {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+// Стандартный outline хрома
+.form__input-avatar:focus+.form__label--avatar {
+  outline-color: #4D90FE;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.form__user-name {
+  margin-bottom: 30px;
 }
