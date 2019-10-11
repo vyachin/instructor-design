@@ -1,0 +1,14 @@
+.alert-my {
+  position: absolute;
+  top: 0;
+
+  width: $alert-width;
+  max-width: $alert-max-width;
+  margin-left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.alert-my__text {
+  margin: 0;
+}
