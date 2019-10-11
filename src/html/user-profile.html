@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  //= ../template/head.html
+</head>
+
+<body>
+  <header class="header header--form">
+    //= ../template/header.html
+  </header>
+
+  <main class="main-user-profile">
+    <h1 class="visually-hidden">Профиль ученика</h1>
+    <section class="main-user-profile__form form form--user-profile">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h2 class="form__title">Профиль</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form class="form__wrapper" action="#" method="POST" enctype="multipart/form-data">
+              <div class="form__section form__section--avatar">
+                <div class="form__sub-section form__sub-section--img">
+                  <div class="form__user-img-wrapper">
+                    <div class="form__user-img-bg">
+                      <p class="form__user-img-description">Аватарка</p>
+                    </div>
+                    <!-- Добавление картинки средствами js -->
+                    <!-- <img class="form__user-img" alt="Аватарка"> -->
+                  </div>
+                  <fieldset class="form__user-avatar-block">
+                    <input class="form__input-avatar visually-hidden" type="file" id="user-avatar" accept="image/jpeg,image/png,image/gif"
+                      name="user-avatar">
+                    <label class="form__label form__label--avatar" for="user-avatar">Загрузить</label>
+                  </fieldset>
+                </div>
+                <fieldset class="form__sub-section form__sub-section--full-name">
+                  <div class="form__section form__user-name">
+                    <label class="form__label" for="user-name">Имя</label>
+                    <input class="form__input" type="text" id="user-name" name="user-name" minlength="2">
+                    <p class="form__invalid-text display-none">Имя слишком короткое</p>
+                  </div>
+                  <div class="form__section form__user-surname">
+                    <label class="form__label" for="user-surname">Фамилия</label>
+                    <input class="form__input" type="text" id="user-surname" name="user-surname" minlength="2">
+                    <p class="form__invalid-text display-none">Фамилия слишком короткая</p>
+                  </div>
+                </fieldset>
+              </div>
+              <fieldset class="form__section form__section--user-email">
+                <label class="form__label" for="user-email">E-mail</label>
+                <input class="form__input" type="email" id="user-email" name="user-email" minlength="5">
+                <p class="form__invalid-text display-none">E-mail слишком короткий</p>
+              </fieldset>
+              <fieldset class="form__section form__section--user-birth-date">
+                <label class="form__label" for="user-birth-date">Дата рождения</label>
+                <input class="form__input form__input--birth-date" type="date" id="user-birth-date" name="user-birth-date" min="1920-01-01">
+                <p class="form__invalid-text display-none">Неправильная дата</p>
+              </fieldset>
+              <fieldset class="form__section form__section--submit">
+                <button class="button" type="submit">Обновить</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container alert-my">
+        <div class="row justify-content-center">
+          <div class="alert alert-success alert-dismissible fade show col-6" role="alert">
+            <p class="alert-my__text">Профиль успешно сохранен</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  //= ../template/scripts.html
+
+</body>
+
+</html>
