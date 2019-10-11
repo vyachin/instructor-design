@@ -17,12 +17,10 @@ $button-text: $light-blue;
 $form-borders: $almost-white;
 $main-text-color: $black;
 $invalid: $red;
-$popup-text-color: $light-green;
-$popup-bg-color: $lightest-green;
 
 // ---Sizes---
 $form-title-size: 32px;
 $label-text-size: 14px;
-$popup-text-size: 14px;
 
-$popup-width: 700px;
+$alert-width: 85%;
+$alert-max-width: 700px;

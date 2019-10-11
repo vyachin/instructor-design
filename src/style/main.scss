@@ -27,11 +27,11 @@
 // @import "~bootstrap/scss/_pagination";
 // @import "~bootstrap/scss/_badge";
 // @import "~bootstrap/scss/_jumbotron";
-// @import "~bootstrap/scss/_alert";
+@import "~bootstrap/scss/_alert";
 // @import "~bootstrap/scss/_progress";
 // @import "~bootstrap/scss/_media";
 // @import "~bootstrap/scss/_list-group";
-// @import "~bootstrap/scss/_close";
+@import "~bootstrap/scss/_close";
 // @import "~bootstrap/scss/_toasts";
 // @import "~bootstrap/scss/_modal";
 // @import "~bootstrap/scss/_tooltip";
@@ -50,4 +50,4 @@
 @import "blocks/button.scss";
 @import "blocks/main-change.scss";
 @import "blocks/form.scss";
-@import "blocks/popup.scss";
+@import "blocks/alert-my.scss";
