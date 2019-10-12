@@ -51,12 +51,13 @@
     flex-direction: row;
   }
 
-  &--user-email,
-  &--user-birth-date {
+  &--email,
+  &--birth-date,
+  &--description {
     margin-bottom: 35px;
   }
 
-  &--user-birth-date {
+  &--birth-date {
     width: 160px;
   }
 }
@@ -87,6 +88,10 @@
 
   &--birth-date {
     text-align: center;
+  }
+
+  &--textarea {
+    resize: none;
   }
 }
 
@@ -130,7 +135,7 @@
   margin-left: 15px;
 }
 
-.form__user-img {
+.form__img {
   position: absolute;
 
   display: block;
@@ -139,7 +144,7 @@
   object-fit: cover;
 }
 
-.form__user-img-wrapper {
+.form__img-wrapper {
   position: relative;
 
   display: flex;
@@ -151,7 +156,7 @@
   border: 2px solid $avatar-bg;
 }
 
-.form__user-img-bg {
+.form__img-bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +166,7 @@
   background-color: $avatar-bg;
 }
 
-.form__user-img-description {
+.form__img-description {
   color: $avatar-descr-color;
 }
 
@@ -200,6 +205,6 @@
   outline-width: 5px;
 }
 
-.form__user-name {
+.form__name-block {
   margin-bottom: 30px;
 }
