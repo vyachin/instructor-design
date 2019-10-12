@@ -19,20 +19,20 @@
             <h2 class="form__title">Профиль</h2>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <fiel class="col-6">
-            <form class="form__wrapper" action="#" method="POST" enctype="multipart/form-data">
+        <form class="form__wrapper" action="#" method="POST" enctype="multipart/form-data">
+          <div class="row justify-content-center">
+            <div class="col-6">
               <div class="form__section form__section--avatar">
-                <div class="form__sub-section form__sub-section--img">
-                  <div class="form__img-wrapper">
-                    <div class="form__img-bg">
-                      <p class="form__img-description">Аватарка</p>
+                <div class="form__sub-section form__sub-section--avatar">
+                  <div class="form__avatar-wrapper">
+                    <div class="form__avatar-bg">
+                      <p class="form__avatar-description">Аватарка</p>
                     </div>
                     <!-- Добавление картинки средствами js -->
-                    <!-- <img class="form__img" alt="Аватарка"> -->
+                    <!-- <img class="form__avatar" alt="Аватарка"> -->
                   </div>
                   <fieldset class="form__avatar-block">
-                    <input class="form__input-avatar visually-hidden" type="file" id="instructor-avatar"
+                    <input class="form__input-avatar form__input-file visually-hidden" type="file" id="instructor-avatar"
                       accept="image/jpeg,image/png,image/gif" name="instructor-avatar">
                     <label class="form__label form__label--avatar" for="instructor-avatar">Загрузить</label>
                   </fieldset>
@@ -80,12 +80,40 @@
                 </div>
                 <p class="form__invalid-text display-none">Выберите виды спорта по которым Вы можете инструктировать</p>
               </fieldset>
-              <fieldset class="form__section form__section--submit">
-                <button class="button" type="submit">Обновить</button>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-6">
+              <fieldset class="form__section form__section--gallery gallery">
+                <p class="form__label form__label--gallery">Галерея</p>
+                <div class="gallery__wrap">
+                  <!-- Образецы картинок -->
+                  <div class="gallery__img-wrap">
+                    <img class="gallery__img" src="img/1.jpg" width="170" height="170" alt="Случайная фотография">
+                    <button class="gallery__img-del" type="button">Удалить</button>
+                  </div>
+                  <div class="gallery__img-wrap">
+                    <img class="gallery__img" src="img/1.jpg" width="170" height="170" alt="Случайная фотография">
+                    <button class="gallery__img-del" type="button">Удалить</button>
+                  </div>
+                  <div class="gallery__img-wrap">
+                    <img class="gallery__img" src="img/1.jpg" width="170" height="170" alt="Случайная фотография">
+                    <button class="gallery__img-del" type="button">Удалить</button>
+                  </div>
+                </div>
+                <div class="gallery__img-add-wrapper">
+                  <input class="gallery__img-add form__input-file visually-hidden" type="file" id="instructor-img"
+                    accept="image/jpeg,image/png,image/gif" name="instructor-img">
+                  <label class="form__label form__label--add-img" for="instructor-img">Загрузить</label>
+                </div>
               </fieldset>
-            </form>
+              <div class="form__section-wrapper">
+                <fieldset class="form__section form__section--submit">
+                  <button class="button" type="submit">Обновить</button>
+                </fieldset>
+              </div>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
       <div class="container alert-my">
         <div class="row justify-content-center">
@@ -100,6 +128,7 @@
     </section>
   </main>
 
+  //= ../template/picture-gallery.html
   //= ../template/scripts.html
 
 </body>
