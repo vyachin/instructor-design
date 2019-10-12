@@ -2,6 +2,7 @@
   position: relative;
 
   padding-top: 50px;
+  margin-bottom: 30px;
 }
 
 .form__title {
@@ -51,13 +52,19 @@
     flex-direction: row;
   }
 
-  &--user-email,
-  &--user-birth-date {
+  &--email,
+  &--birth-date,
+  &--description {
     margin-bottom: 35px;
   }
 
-  &--user-birth-date {
+  &--birth-date {
     width: 160px;
+  }
+
+  &--index-submit {
+    margin-top: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -87,6 +94,10 @@
 
   &--birth-date {
     text-align: center;
+  }
+
+  &--textarea {
+    resize: none;
   }
 }
 
@@ -130,7 +141,7 @@
   margin-left: 15px;
 }
 
-.form__user-img {
+.form__avatar {
   position: absolute;
 
   display: block;
@@ -139,7 +150,7 @@
   object-fit: cover;
 }
 
-.form__user-img-wrapper {
+.form__avatar-wrapper {
   position: relative;
 
   display: flex;
@@ -151,7 +162,7 @@
   border: 2px solid $avatar-bg;
 }
 
-.form__user-img-bg {
+.form__avatar-bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,31 +172,51 @@
   background-color: $avatar-bg;
 }
 
-.form__user-img-description {
+.form__avatar-description {
   color: $avatar-descr-color;
 }
 
-.form__label--avatar {
-  margin-left: 50%;
-  transform: translateX(-50%);
+.form__label {
+  &--avatar {
+    margin-left: 50%;
+    transform: translateX(-50%);
 
-  font-weight: 500;
-  color: $avatar-link-color;
-  text-decoration: underline;
-  cursor: pointer;
+    font-weight: 500;
+    color: $avatar-link-color;
+    text-decoration: underline;
+    cursor: pointer;
 
-  &:hover {
-    text-decoration: none;
-    opacity: 0.8;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
-  &:active {
-    opacity: 0.3;
+  &--gallery {
+    margin-bottom: 10px;
+
+    color: $gallery-text-color;
+  }
+
+  &--add-img {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0;
+
+    color: $main-text-color;
+    border: 1px solid $button-bg-img;
+    border-radius: 5px;
+
+    cursor: pointer;
   }
 }
 
-.form__input-avatar:active,
-.form__input-avatar:focus {
+.form__input-file:active,
+.form__input-file:focus {
   position: absolute;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
@@ -193,13 +224,21 @@
 }
 
 // Стандартный outline хрома
-.form__input-avatar:focus+.form__label--avatar {
+.form__input-file:focus+.form__label {
   outline-color: #4D90FE;
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
 }
 
-.form__user-name {
+.form__name-block {
   margin-bottom: 30px;
+}
+
+.form__section-wrapper {
+  display: flex;
+}
+
+.form__submit-wrapper {
+  display: flex;
 }

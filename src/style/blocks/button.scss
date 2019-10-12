@@ -10,6 +10,8 @@
   color: $button-text;
 
   &--index {
+    min-width: 65px;
     padding: 5px 0;
+    margin-bottom: 2px;
   }
 }

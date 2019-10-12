@@ -1,0 +1,22 @@
+.gallery__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.gallery__img-wrap {
+  position: relative;
+
+  width: 170px;
+
+  &--add {
+    display: flex;
+  }
+}
+
+.gallery__img-del {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
