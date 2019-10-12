@@ -24,31 +24,31 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-3">
-              <label class="form__label" for="equipment">Вид спорта</label>
+              <fieldset class="form__section form__section--index-submit">
+                <label class="form__label" for="equipment">Вид спорта</label>
+                <select class="form__input form__input--equipment" name="equipment" id="equipment" required>
+                  <option value="">&nbsp;</option>
+                  <option value="snowboard">Сноуборд</option>
+                  <option value="skiing">Лыжи</option>
+                  <option value="sled">Санки</option>
+                </select>
+              </fieldset>
             </div>
             <div class="col-6">
-              <label class="form__label" for="place">Место</label>
+              <fieldset class="form__section form__section--index-submit">
+                <label class="form__label" for="place">Место</label>
+                <input class="form__input" type="text" list="place-list" name="place" id="place">
+                <datalist id="place-list">
+                  <option value="redGlade">Красная поляна</option>
+                  <option value="alps">Альпы</option>
+                  <option value="gasprom">Газпром</option>
+                </datalist>
+              </fieldset>
             </div>
-            <div class="col-1"></div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-3">
-              <select class="form__input form__input--equipment" name="equipment" id="equipment" required>
-                <option value="snowboard">Сноуборд</option>
-                <option value="skiing">Лыжи</option>
-                <option value="sled">Санки</option>
-              </select>
-            </div>
-            <div class="col-6">
-              <input class="form__input" type="text" list="place-list" name="place" id="place">
-              <datalist id="place-list">
-                <option value="redGlade">Красная поляна</option>
-                <option value="alps">Альпы</option>
-                <option value="gasprom">Газпром</option>
-              </datalist>
-            </div>
-            <div class="col-1">
-              <button class="button button--index" type="submit">Найти</button>
+            <div class="col-1 form__submit-wrapper">
+              <fieldset class="form__section form__section--index-submit">
+                <button class="button button--index" type="submit">Найти</button>
+              </fieldset>
             </div>
           </div>
         </div>
